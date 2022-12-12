@@ -1,10 +1,10 @@
 namespace _12122022_Filip_test
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         List<Employee> employees;
         SqlRepository sqlRepository = new SqlRepository();
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             employees = sqlRepository.GetEmployees();
@@ -31,6 +31,22 @@ namespace _12122022_Filip_test
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var formAdd = new FormAdd();
+            formAdd.Show(this);
+            return;
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            //if not selected, tak se to neotevre
+            var formEdit = new FormEdit();
+            formEdit.Show(this);
+            return;
+            //else otevre
         }
     }
 }

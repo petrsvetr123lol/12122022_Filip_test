@@ -1,6 +1,6 @@
 ﻿namespace _12122022_Filip_test
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.insertButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -44,32 +44,34 @@
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
-            // button1
+            // insertButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Insert new record";
-            this.button1.UseVisualStyleBackColor = true;
+            this.insertButton.Location = new System.Drawing.Point(12, 12);
+            this.insertButton.Name = "insertButton";
+            this.insertButton.Size = new System.Drawing.Size(110, 23);
+            this.insertButton.TabIndex = 2;
+            this.insertButton.Text = "Insert new record";
+            this.insertButton.UseVisualStyleBackColor = true;
+            this.insertButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // deleteButton
             // 
-            this.button2.Location = new System.Drawing.Point(128, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Delete record";
-            this.button2.UseVisualStyleBackColor = true;
+            this.deleteButton.Location = new System.Drawing.Point(244, 12);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(110, 23);
+            this.deleteButton.TabIndex = 3;
+            this.deleteButton.Text = "Delete record";
+            this.deleteButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // editButton
             // 
-            this.button3.Location = new System.Drawing.Point(244, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Edit record";
-            this.button3.UseVisualStyleBackColor = true;
+            this.editButton.Location = new System.Drawing.Point(128, 12);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(110, 23);
+            this.editButton.TabIndex = 4;
+            this.editButton.Text = "Edit record";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // button5
             // 
@@ -158,7 +160,7 @@
             this.columnHeader6.Text = "Birth date";
             this.columnHeader6.Width = 80;
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,10 +170,10 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.insertButton);
+            this.Name = "FormMain";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -180,9 +182,9 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button insertButton;
+        private Button deleteButton;
+        private Button editButton;
         private Button button5;
         private Button button6;
         private Button button7;
