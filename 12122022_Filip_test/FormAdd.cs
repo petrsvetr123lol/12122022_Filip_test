@@ -12,9 +12,21 @@ namespace _12122022_Filip_test
 {
     public partial class FormAdd : Form
     {
-        public FormAdd()
+        private Employee? employee;
+
+        public FormAdd(Employee? employee)
         {
             InitializeComponent();
+        }
+
+        private void insertButton_Click(object sender, EventArgs e)
+        {
+            SqlRepository sqlRepository = new SqlRepository();
+            employee = new Employee(firstNameTxt.Text,lastNameTxt.Text,phoneTxt.Text,emailTxt.Text,DateTime.Today);
+            sqlRepository.CreateEmployee(employee);
+            FormMain formMain = new FormMain();
+            this.Close();
+            formMain.Show();
         }
     }
 }
