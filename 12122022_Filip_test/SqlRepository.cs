@@ -63,7 +63,7 @@ namespace _12122022_Filip_test
             }
         }
 
-        public void RemoveEmployees(int row)
+        public void RemoveEmployees(string lastName)
         {
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
@@ -71,8 +71,8 @@ namespace _12122022_Filip_test
                 using (SqlCommand sqlCommand = new SqlCommand())
                 {
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = "DELETE FROM Employee WHERE Id=@Id";
-                    sqlCommand.Parameters.AddWithValue("Id", row);
+                    sqlCommand.CommandText = "DELETE FROM Employee WHERE LastName=@LastName";
+                    sqlCommand.Parameters.AddWithValue("LastName", lastName);
                     sqlCommand.ExecuteNonQuery();
                 }
                 sqlConnection.Close();
@@ -88,7 +88,7 @@ namespace _12122022_Filip_test
         }
         public void YoungestEmployee()
         {
-            
+        
         }
         public void AvgEmployee()
         {
@@ -98,7 +98,7 @@ namespace _12122022_Filip_test
                 using(SqlCommand sqlCommand = new SqlCommand())
                 {
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = "SELECT BirthDate FROM Employee";
+                    sqlCommand.CommandText = "SELECT ";
                 }
             }
         }

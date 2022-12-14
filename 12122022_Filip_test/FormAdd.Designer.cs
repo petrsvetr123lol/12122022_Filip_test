@@ -39,6 +39,7 @@
             this.birthDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.insertButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // firstNameTxt
@@ -128,20 +129,31 @@
             // 
             // insertButton
             // 
-            this.insertButton.Location = new System.Drawing.Point(90, 232);
+            this.insertButton.Location = new System.Drawing.Point(163, 232);
             this.insertButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.insertButton.Name = "insertButton";
-            this.insertButton.Size = new System.Drawing.Size(183, 33);
+            this.insertButton.Size = new System.Drawing.Size(110, 33);
             this.insertButton.TabIndex = 10;
             this.insertButton.Text = "Insert data";
             this.insertButton.UseVisualStyleBackColor = true;
             this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(53, 234);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(104, 31);
+            this.cancelButton.TabIndex = 11;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // FormAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 281);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.insertButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.birthDatePicker);
@@ -174,5 +186,6 @@
         private DateTimePicker birthDatePicker;
         private Label label5;
         private Button insertButton;
+        private Button cancelButton;
     }
 }

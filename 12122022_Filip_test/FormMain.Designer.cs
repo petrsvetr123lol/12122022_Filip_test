@@ -31,10 +31,10 @@
             this.insertButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.countButton = new System.Windows.Forms.Button();
+            this.avgAgeButton = new System.Windows.Forms.Button();
+            this.oldestButton = new System.Windows.Forms.Button();
+            this.youngestButton = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -76,46 +76,47 @@
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
-            // button5
+            // countButton
             // 
-            this.button5.Location = new System.Drawing.Point(589, 204);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 31);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Count ";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.countButton.Location = new System.Drawing.Point(589, 204);
+            this.countButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.countButton.Name = "countButton";
+            this.countButton.Size = new System.Drawing.Size(83, 31);
+            this.countButton.TabIndex = 6;
+            this.countButton.Text = "Count ";
+            this.countButton.UseVisualStyleBackColor = true;
+            this.countButton.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // avgAgeButton
             // 
-            this.button6.Location = new System.Drawing.Point(589, 243);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 31);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Avg age";
-            this.button6.UseVisualStyleBackColor = true;
+            this.avgAgeButton.Location = new System.Drawing.Point(589, 243);
+            this.avgAgeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.avgAgeButton.Name = "avgAgeButton";
+            this.avgAgeButton.Size = new System.Drawing.Size(83, 31);
+            this.avgAgeButton.TabIndex = 7;
+            this.avgAgeButton.Text = "Avg age";
+            this.avgAgeButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // oldestButton
             // 
-            this.button7.Location = new System.Drawing.Point(589, 282);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 31);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Oldest";
-            this.button7.UseVisualStyleBackColor = true;
+            this.oldestButton.Location = new System.Drawing.Point(589, 282);
+            this.oldestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.oldestButton.Name = "oldestButton";
+            this.oldestButton.Size = new System.Drawing.Size(83, 31);
+            this.oldestButton.TabIndex = 8;
+            this.oldestButton.Text = "Oldest";
+            this.oldestButton.UseVisualStyleBackColor = true;
+            this.oldestButton.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // youngestButton
             // 
-            this.button8.Location = new System.Drawing.Point(589, 320);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(83, 31);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Youngest";
-            this.button8.UseVisualStyleBackColor = true;
+            this.youngestButton.Location = new System.Drawing.Point(589, 320);
+            this.youngestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.youngestButton.Name = "youngestButton";
+            this.youngestButton.Size = new System.Drawing.Size(83, 31);
+            this.youngestButton.TabIndex = 9;
+            this.youngestButton.Text = "Youngest";
+            this.youngestButton.UseVisualStyleBackColor = true;
             // 
             // listView1
             // 
@@ -151,17 +152,17 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Phone";
-            this.columnHeader4.Width = 80;
+            this.columnHeader4.Width = 100;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Email";
-            this.columnHeader5.Width = 120;
+            this.columnHeader5.Width = 150;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Birth date";
-            this.columnHeader6.Width = 80;
+            this.columnHeader6.Width = 100;
             // 
             // FormMain
             // 
@@ -169,10 +170,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 370);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.youngestButton);
+            this.Controls.Add(this.oldestButton);
+            this.Controls.Add(this.avgAgeButton);
+            this.Controls.Add(this.countButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.insertButton);
@@ -189,10 +190,10 @@
         private Button insertButton;
         private Button deleteButton;
         private Button editButton;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button countButton;
+        private Button avgAgeButton;
+        private Button oldestButton;
+        private Button youngestButton;
         private ListView listView1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;

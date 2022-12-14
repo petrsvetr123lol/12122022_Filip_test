@@ -16,5 +16,10 @@ namespace _12122022_Filip_test
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

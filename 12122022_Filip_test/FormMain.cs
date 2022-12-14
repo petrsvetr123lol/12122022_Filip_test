@@ -49,21 +49,35 @@
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            //if not selected, tak se to neotevre
-            var formEdit = new FormEdit();
-            formEdit.Show(this);
-            return;
-            //else otevre
+            if(listView1.SelectedItems.Count > 0)
+            {
+                var formEdit = new FormEdit();
+                formEdit.Show(this);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Nebyl vybrát uživatel k editaci");
+            }
+            
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-
+            var selectedRow = listView1.SelectedItems[0];
+            string lastName = selectedRow.SubItems[1].Text;
+            sqlRepository.RemoveEmployees(lastName);
+            listView1.SelectedItems[0].Remove();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             MessageBox.Show("V databázi se aktuálně nachází " + sqlRepository.CountEmployee().ToString()+ " uživatelů.");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            sqlRepository.OldestEmployee();
         }
     }
 }
