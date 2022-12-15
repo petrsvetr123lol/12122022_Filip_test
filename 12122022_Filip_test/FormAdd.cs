@@ -21,17 +21,27 @@ namespace _12122022_Filip_test
 
         private void insertButton_Click(object sender, EventArgs e)
         {
-            SqlRepository sqlRepository = new SqlRepository();
-            employee = new Employee(firstNameTxt.Text,lastNameTxt.Text,phoneTxt.Text,emailTxt.Text,birthDatePicker.Value);
-            sqlRepository.CreateEmployee(employee);
-            FormMain formMain = new FormMain();
-            this.Close();
-            formMain.Show();
+            try
+            {
+                SqlRepository sqlRepository = new SqlRepository();
+                employee = new Employee(firstNameTxt.Text,lastNameTxt.Text,phoneTxt.Text,emailTxt.Text,birthDatePicker.Value);
+                sqlRepository.CreateEmployee(employee);
+                FormMain formMain = new FormMain();
+                this.Close();
+                formMain.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nelze přidat více uživatelů stejného příjmení! "+ ex.Message);
+            }
+         
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            Close();
+            FormMain formMain = new FormMain();
+            this.Close();
+            formMain.Show();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic.ApplicationServices;
+using System.Data.SqlTypes;
 
 namespace _12122022_Filip_test
 {
@@ -78,6 +79,27 @@ namespace _12122022_Filip_test
                 sqlConnection.Close();
             }
         }
+
+        public void EditEmployee(Employee employee)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand cmd = sqlConnection.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Employee SET FirstName=@FirstName,Phone=@Phone,Email=@Email,BirthDate=@BirthDate WHERE LastName=@LastName";
+                    cmd.Parameters.AddWithValue("FirstName", employee.FirstName);
+                    cmd.Parameters.AddWithValue("LastName", employee.LastName);
+                    cmd.Parameters.AddWithValue("Phone", employee.Phone);
+                    cmd.Parameters.AddWithValue("Email", employee.Email);
+                    cmd.Parameters.AddWithValue("BirthDate", employee.Birthdate);
+                    cmd.ExecuteNonQuery();
+                }
+                sqlConnection.Close();
+            }
+        }
+
+
         public void UpdateEmployee()
         {
 

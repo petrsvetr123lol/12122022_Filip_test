@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.bDayPicker = new System.Windows.Forms.DateTimePicker();
+            this.emailTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.phoneTxt = new System.Windows.Forms.TextBox();
+            this.LnameTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameTxt = new System.Windows.Forms.TextBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // updateButton
             // 
-            this.button1.Location = new System.Drawing.Point(155, 223);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 33);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Update data";
-            this.button1.UseVisualStyleBackColor = true;
+            this.updateButton.Location = new System.Drawing.Point(155, 223);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(110, 33);
+            this.updateButton.TabIndex = 21;
+            this.updateButton.Text = "Update data";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -61,21 +62,21 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Birth Date";
             // 
-            // dateTimePicker1
+            // bDayPicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(82, 171);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(182, 27);
-            this.dateTimePicker1.TabIndex = 19;
+            this.bDayPicker.Location = new System.Drawing.Point(82, 171);
+            this.bDayPicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bDayPicker.Name = "bDayPicker";
+            this.bDayPicker.Size = new System.Drawing.Size(182, 27);
+            this.bDayPicker.TabIndex = 19;
             // 
-            // textBox4
+            // emailTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(82, 132);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(182, 27);
-            this.textBox4.TabIndex = 18;
+            this.emailTxt.Location = new System.Drawing.Point(82, 132);
+            this.emailTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.emailTxt.Name = "emailTxt";
+            this.emailTxt.Size = new System.Drawing.Size(182, 27);
+            this.emailTxt.TabIndex = 18;
             // 
             // label4
             // 
@@ -86,21 +87,21 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Email";
             // 
-            // textBox3
+            // phoneTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(82, 93);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 27);
-            this.textBox3.TabIndex = 16;
+            this.phoneTxt.Location = new System.Drawing.Point(82, 93);
+            this.phoneTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.phoneTxt.Name = "phoneTxt";
+            this.phoneTxt.Size = new System.Drawing.Size(182, 27);
+            this.phoneTxt.TabIndex = 16;
             // 
-            // textBox2
+            // LnameTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(82, 55);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 27);
-            this.textBox2.TabIndex = 15;
+            this.LnameTxt.Location = new System.Drawing.Point(82, 55);
+            this.LnameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LnameTxt.Name = "LnameTxt";
+            this.LnameTxt.Size = new System.Drawing.Size(182, 27);
+            this.LnameTxt.TabIndex = 15;
             // 
             // label3
             // 
@@ -129,13 +130,13 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "First name";
             // 
-            // textBox1
+            // nameTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 16);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 27);
-            this.textBox1.TabIndex = 11;
+            this.nameTxt.Location = new System.Drawing.Point(82, 16);
+            this.nameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameTxt.Name = "nameTxt";
+            this.nameTxt.Size = new System.Drawing.Size(182, 27);
+            this.nameTxt.TabIndex = 11;
             // 
             // cancelButton
             // 
@@ -154,20 +155,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 281);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.bDayPicker);
+            this.Controls.Add(this.emailTxt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.phoneTxt);
+            this.Controls.Add(this.LnameTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nameTxt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FormEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEdit";
+            this.Load += new System.EventHandler(this.FormEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,17 +180,17 @@
 
         #endregion
 
-        private Button button1;
+        private Button updateButton;
         private Label label5;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox4;
+        private DateTimePicker bDayPicker;
+        private TextBox emailTxt;
         private Label label4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox phoneTxt;
+        private TextBox LnameTxt;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox nameTxt;
         private Button cancelButton;
     }
 }

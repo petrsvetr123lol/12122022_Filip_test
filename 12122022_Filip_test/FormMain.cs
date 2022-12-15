@@ -51,9 +51,16 @@
         {
             if(listView1.SelectedItems.Count > 0)
             {
-                var formEdit = new FormEdit();
-                formEdit.Show(this);
-                return;
+                this.Hide();
+                FormEdit formEdit = new FormEdit();
+                formEdit.Show();
+                var selectedRow = listView1.SelectedItems[0];
+                var firstname = selectedRow.SubItems[0].Text;
+                var lastname = selectedRow.SubItems[1].Text;
+                var phone = selectedRow.SubItems[2].Text;
+                var email = selectedRow.SubItems[3].Text;
+                var birthdate = selectedRow.SubItems[4].Text;
+                formEdit.GetData(firstname, lastname, phone, email,birthdate);
             }
             else
             {
@@ -64,15 +71,24 @@
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            var selectedRow = listView1.SelectedItems[0];
-            string lastName = selectedRow.SubItems[1].Text;
-            sqlRepository.RemoveEmployees(lastName);
-            listView1.SelectedItems[0].Remove();
+            if(listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Nebyl vybrán uživatel ke smazání");
+               
+            }
+            else
+            {
+                var selectedRow = listView1.SelectedItems[0];
+                string lastName = selectedRow.SubItems[1].Text;
+                sqlRepository.RemoveEmployees(lastName);
+                listView1.SelectedItems[0].Remove();
+            }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("V databázi se aktuálně nachází " + sqlRepository.CountEmployee().ToString()+ " uživatelů.");
+            //MessageBox.Show("V databázi se aktuálně nachází " + sqlRepository.CountEmployee().ToString()+ " uživatelů.");
         }
 
         private void button7_Click(object sender, EventArgs e)
